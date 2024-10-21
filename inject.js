@@ -9323,14 +9323,27 @@ else if(window.location=="https://vtop.vit.ac.in/vtop/login" && document.getElem
         console.log("captcha not found");
         window.location.href = "https://vtop.vit.ac.in/vtop/login";
     }
-    document.getElementById("username").value="<enter username>";
-    document.getElementById("password").value="<enter password>";
-    myMain(event);
-    // document.getElementById("captchaStr").value="in";
-    document.getElementById('submitBtn').click();
-    }
-    else if(window.location=="https://vtop.vit.ac.in/vtop/content"){
-        console.log("login complete");
+    this.window.addEventListener("load",function(){
+      if(!chrome.runtime.lastError){
+        chrome.storage.sync.get(['username', 'password'], function (items) {
+            const storedUsername = items.username;
+            const storedPassword = items.password;
+            console.log(storedUsername);
+            document.getElementById("username").value=storedUsername;
+            document.getElementById("password").value=storedPassword;
+            myMain(event);
+            // document.getElementById("captchaStr").value="in";
+            document.getElementById('submitBtn').click();
+        });
+      }
+      else{
+        alert("Failed to retrieve credentials, check network connection or enable sync");
+      }
+    });
+    
+}
+else if(window.location=="https://vtop.vit.ac.in/vtop/content"){
+    console.log("login complete");
     }
 }
 

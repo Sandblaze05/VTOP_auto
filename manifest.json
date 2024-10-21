@@ -1,21 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "VTOP-auto",
-    "version": "1.0",
-    "description": "Tedious huh",
-    "permissions": [
-      "scripting",
-      "activeTab"
-    ],
-    "content_scripts": [
-      {
-        "matches": [
-          "https://vtop.vit.ac.in/*"
-        ],
-        "js": [
-          "inject.js"
-        ]
-      }
-    ]
-  }
-  
+  "manifest_version": 3,
+  "name": "VTOP-auto",
+  "version": "1.0",
+  "description": "Tedious huh",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://vtop.vit.ac.in/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
+}
