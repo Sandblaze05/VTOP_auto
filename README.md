@@ -2,5 +2,6 @@
 This extension does just that. Logs into VTOP all the way through no matter WHAT.
 
 # Usage
-Edit the inject.js file `line: 9326` and `line: 9327` with the mentioned attribute then add the extension to your browser.
-Go to manage extensions -> load unpacked and select VTOP_auto folder.
+Go to manage extensions -> load unpacked and select VTOP_auto folder.\
+Click the extension icon and enter your credentials (credentials are synced with your chrome profile using chrome api).\
+After submitting the form simply open VTOP.
