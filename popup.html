@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Enter Credentials</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -15,25 +14,19 @@
             height: 100vh;
             background-color: #1e1e1e;
             overflow: hidden;
-            /* Prevent scrollbars */
         }
 
         .login-container {
             background-color: #2c2c2c;
             padding: 30px;
             border-radius: 20px;
-            /* Rounded corners */
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
             width: 350px;
             height: auto;
             transition: transform 0.3s ease-in-out;
             border: none;
-            /* Ensure no borders around the popup */
             overflow: hidden;
-            /* Ensure no overflow in case of large content */
         }
-
-
 
         .login-container:hover {
             transform: scale(1.05);
@@ -60,7 +53,7 @@
             padding: 12px;
             border: none;
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             background-color: #3a3a3a;
             color: #fff;
             font-size: 1em;
@@ -71,6 +64,17 @@
         input[type="text"]:focus,
         input[type="password"]:focus {
             background-color: #4e4e4e;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Adds spacing between the checkbox and label */
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"] {
+            margin: 0;
         }
 
         input[type="submit"] {
@@ -105,8 +109,15 @@
         <form id="loginForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required autocomplete="off" />
+            
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required autocomplete="off" />
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="togglePassword" />
+                <label for="togglePassword" style="color: #ddd; font-size: 0.9em; margin-top: 5px;">Show Password</label>
+            </div>
+            
             <input type="submit" value="Submit" />
         </form>
         <div id="savedMessage" style="display: none;">Credentials already saved!</div>
@@ -114,5 +125,4 @@
 
     <script src="popup.js"></script>
 </body>
-
 </html>

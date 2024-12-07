@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "VTOP-auto",
-  "version": "1.0",
+  "version": "1.0.2",
   "description": "Tedious huh",
   "permissions": [
     "scripting",

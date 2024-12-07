@@ -9313,37 +9313,37 @@ function submitForm(formName) {
 const main = () => {
     if((window.location=="https://vtop.vit.ac.in/vtop/login" || window.location=="https://vtop.vit.ac.in/vtop/open/page") 
         && document.getElementById("stdForm")){
-    window.addEventListener("load", function(){
-        submitForm("stdForm");
-    })
-}
-else if(window.location=="https://vtop.vit.ac.in/vtop/login" && document.getElementById("submitBtn")){
-    if(document.getElementById("captchaStr")==null){
+      window.addEventListener("load", function(){
+          submitForm("stdForm");
+      })
+    }
+    else if((window.location=="https://vtop.vit.ac.in/vtop/login" || window.location=="https://vtop.vit.ac.in/vtop/login/error") && document.getElementById("submitBtn")){
+      if(document.getElementById("captchaStr")==null){
         //location.reload();
         console.log("captcha not found");
         window.location.href = "https://vtop.vit.ac.in/vtop/login";
-    }
-    this.window.addEventListener("load",function(){
-      if(!chrome.runtime.lastError){
-        chrome.storage.sync.get(['username', 'password'], function (items) {
-            const storedUsername = items.username;
-            const storedPassword = items.password;
-            console.log(storedUsername);
-            document.getElementById("username").value=storedUsername;
-            document.getElementById("password").value=storedPassword;
-            myMain(event);
-            // document.getElementById("captchaStr").value="in";
-            document.getElementById('submitBtn').click();
-        });
       }
-      else{
-        alert("Failed to retrieve credentials, check network connection or enable sync");
-      }
-    });
+      this.window.addEventListener("load",function(){
+        if(!chrome.runtime.lastError){
+          chrome.storage.sync.get(['username', 'password'], function (items) {
+              const storedUsername = items.username;
+              const storedPassword = items.password;
+              console.log(storedUsername);
+              document.getElementById("username").value=storedUsername;
+              document.getElementById("password").value=storedPassword;
+              myMain(event);
+              // document.getElementById("captchaStr").value="in";
+              document.getElementById('submitBtn').click();
+          });
+        }
+        else{
+          alert("Failed to retrieve credentials, check network connection or enable sync");
+        }
+      });
     
-}
-else if(window.location=="https://vtop.vit.ac.in/vtop/content"){
-    console.log("login complete");
+    }
+    else if(window.location=="https://vtop.vit.ac.in/vtop/content"){
+      console.log("login complete");
     }
 }
 

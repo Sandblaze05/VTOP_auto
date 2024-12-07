@@ -8,7 +8,7 @@ document.addEventListener("submit", function (event) {
     chrome.storage.sync.set({ username, password }, function (result) {
         if (chrome.runtime.lastError) {
             console.error('Error storing credentials:', chrome.runtime.lastError);
-        } 
+        }
         else {
             console.log('Credentials stored successfully');
             chrome.storage.sync.get(['username', 'password'], function (items) {
@@ -21,3 +21,13 @@ document.addEventListener("submit", function (event) {
     });
 })
 
+const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('change', () => {
+    if (togglePassword.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+});
