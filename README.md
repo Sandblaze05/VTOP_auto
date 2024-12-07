@@ -5,15 +5,15 @@
   </p>
 
   <h2>Usage</h2>
-  <ol>
+  <ul>
     <li>
-      Go to **chrome://extensions** in your Chrome browser.
+      Go to <strong>chrome://extensions</strong> in your Chrome browser.
     </li>
     <li>
       Enable "Developer mode" in the top right corner.
     </li>
     <li>
-      Click "Load unpacked" and select the **VTOP_auto** folder.
+      Click "Load unpacked" and select the <strong>VTOP_auto</strong> folder.
     </li>
     <li>
       Click the extension icon in your browser's toolbar.
@@ -24,7 +24,8 @@
     <li>
       Your credentials will be securely stored in your Chrome profile for future use.
     </li>
-  </ol>
+  </ul>
+  <p>Alternatively, download the <a href="https://github.com/Sandblaze05/VTOP_auto/releases">crx file</a> here and drop it into extensions page with developer mode enabled.</p>
 
   <h2>Note:</h2>
   <ol>
