@@ -3,6 +3,7 @@
   <p>
     Tired of clicking or typing for logging into VTOP? This extension does just that. Logs into VTOP all the way through no matter WHAT (at least in most cases).
   </p>
+  <h3>Download <a href="https://microsoftedge.microsoft.com/addons/detail/vtopauto/mbgmbdiecbfkcnglplcnefiblcplgbkk">here</a> for Edge browser</h3>
 
   <h2>Usage</h2>
   <ul>
